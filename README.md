@@ -2,6 +2,15 @@
 Assignment work by the flaming hot "feeling 20 twoo" group in KIT202
 
 ## A1
+Distribution:
+HD: Commander of Consistency: CSS + Site Navigation
+PJ: Home page, archived
+SK: login, create, about
+
+Timeline:
+- 
+
+
 - Site navigation
   - [ ] logo
   - [ ] Create a site menu (top-level navigation) that provides links to each of the pages
