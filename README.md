@@ -2,13 +2,20 @@
 Assignment work by the flaming hot "feeling 20 twoo" group in KIT202
 
 ## A1
-Distribution:
-HD: Commander of Consistency: CSS + Site Navigation
-PJ: Home page, archived
-SK: login, create, about
+Workload distribution:
+
+- HD: Commander of Consistency: CSS + Site Navigation
+- PJ: Home page, archived
+- SK: login, create, about
 
 Timeline:
-- 
+
+- meeting @morris miller library see messenger at 12:30
+- 21/3
+- 4/4
+- 11/4
+- 18/4
+- **19/4 IS HANDIN**
 
 
 - Site navigation
