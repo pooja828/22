@@ -1,106 +1,121 @@
-/* location */
-header {grid-area:header;}
-nav {grid-area:nav;}
-main{grid-area:main;}
-footer{grid-area:footer;}
 
-.grid-container{
-    display:grid;
-    grid-template-columns: 0.25fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 5px;
-    grid-template-areas:
-  'header header header'
-  'nav nav nav'
-  'footer main main';
-}
+/* Darken header colour, lighten active page link*/
 
-body{
+
+
+
+
+
+
+
+
+
+body, header, nav, footer {
+    display: flex;
+    justify-content: center;
+    font-family: 'Cambria';
+    background-color: #ADC8D9;
     margin: 0;
     padding: 0;
-    font-family: 'Cambria';
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color:#FAD5B8;
 }
 
-button{
-    cursor: pointer;
-    font-family: 'Cambria';
-}
-
-/* text edits */
-h1{
-    color: #A803A8;
-}
-
-h2{
-    color: #FF9F00;
-    font-size: 200%;
-    margin-bottom: 0%;
-}
-
-h3{
-    color: #DBB3FF;
-    font-size: 100%;
-    margin-top:0%
-}
-
-h4{
-    color: #0ADBFD;
-    font-size: 100%;
-    margin-top: 10%
-}
-
-h5{
-    color: #A803A8;
-    font-size: 120%;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    margin-left: 1%;
-}
-
-p{
-    line-height: 25px;
-    text-wrap: balance;
-    line-break: 25;
-}
-
-/* søgbar */
-/* Add a black alpha color to the top navigation bar */
-nav {
-    overflow: hidden;
-    background-color: #e9e9e947;
-    justify-content: center;
+main {
     display: flex;
+    flex-direction: column;
+    height: 5600px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background-color: #DCEAF2;
 }
 
-/* Style the links inside the navigation bar */
-nav a{
-    color: #DBB3FF;
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    transition: height 0.2s ease-in-out;
+    align-items: center;
+    height: 200px;
+}
+
+header.scrolled {
+    background-color: #DCEAF2; /* Primary background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100px; /* new height when scrolled */
+
+}
+
+#logo {
+    width: 175px; /* size when not scrolled */
+    height: auto; /* to maintain aspect ratio */
+    transition: 0.5s;
+}
+
+#logo.scrolled {
+    width: 75px;
+    height: auto;
+}
+
+
+button {
+    cursor: pointer;
+    background-color: #639CBF;
+    color: #025E73;
+}
+
+h1, h5 {
+    color: #0388A6;
+}
+
+h2, h4 {
+    color: #ADC8D9;
+    font-size: 200%;
+}
+
+h3 {
+    color: #639CBF;
+    font-size: 100%;
+}
+
+p {
+    line-height: 25px;
+    color: #025E73;
+}
+
+article {
+    background-color: #DCEAF2;
+    text-align: left;
+    border: 3px solid #ADC8D9;
+    border-radius: 10px;
+    padding: 25px;
+    max-width:70%;
+    margin-bottom: 25px;
+}
+
+nav a {
+    color: #025E73;
     font-size: 150%;
     text-align: center;
     text-decoration: none;
     float: left;
     padding: 10px 15px;
-    text-decoration: wavy;
 }
 
-/* Change the color of links on hover */
-nav a:hover {
-    background-color: #FAD5B8;
-    color: #A803A8;
+nav a:hover, nav a:focus {
+    background-color: #ADC8D9;
+    color: #0388A6;
     font-weight: bold;
 }
 
-/* Style the "active" element to highlight the current page */
-nav a:active {
-    font-weight: italic;
-    text-decoration: dotted;
+nav.scrolled {
+    background-color: #DCEAF2; /* Primary background color */
+    transition: 0.5s;
 }
-/*does not work*/
 
-/* Style the search box inside the navigation bar */
+
 nav input[type=text] {
     float: right;
     padding: 6px;
@@ -110,51 +125,9 @@ nav input[type=text] {
     font-size: 12px;
 }
 
-/* main */
-
-
-/* article */
-article{
-    background-color: #e9e9e9c1;
-    text-align: left;
-    border: 3px dashed #FFFF00;
-    padding: 25px;
-    max-width:70%;
-    margin-bottom: 25px;
-}
-
-/* img */
-img {width:400px; height: auto;}
-
-/* sidebar */
-/* søgbar */
-/* Add a black alpha color to the top navigation bar */
-footer {
-    overflow: hidden;
-    background-color: #e9e9e947;
-    justify-content: center;
-    display: flex;
-}
-
-/* Style the links inside the navigation bar */
-footer a{
-    color: #DBB3FF;
-    font-size: 150%;
-    text-align: center;
-    text-decoration: none;
-    float: left;
-    padding: 10px 15px;
-    text-decoration: wavy;
-}
-
-/* Change the color of links on hover */
-footer a:hover {
-    background-color: #FAD5B8;
-    color: #A803A8;
-    font-weight: italic;
-}
-
-footer a:visited{
-    text-decoration: line-through;
-
+.scroll-button {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    padding: 10px 20px;
 }
