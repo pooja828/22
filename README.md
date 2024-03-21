@@ -23,6 +23,7 @@ Timeline:
   - [x] Create a site menu (top-level navigation) that provides links to each of the pages
   - [x] Apply CSS styling to visually indicate when menu items have focus (i.e., are hovered over) and which menu item is currently active (i.e., which page is displayed)
   - [x] consistently across all pages
+
 - [Homepage](index.html)
   - [ ] first page visitors see
   - [ ] display four blogplosts  in reverse chronological order (i.e., the most recent post first).
@@ -125,3 +126,9 @@ https://javascript.info/onload-ondomcontentloaded
 
 
 https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+
+Sticky navigation so the menu remains pinned to the top or side of the page when scrolled
+Scroll-to-top buttons that appear when the page is scrolled past a certain point
+CSS animations for the reveal of post content on the archive page
+A choice between light and dark CSS themes that can be toggled by the user
+You may choose an embellishment not listed above provided it involves raw HTML/CSS/JavaScript and goes beyond the core requirements. The use of libraries is prohibited. If in doubt, consult with your tutor or the unit coordinator.
