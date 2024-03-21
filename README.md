@@ -19,10 +19,11 @@ Timeline:
 
 ### Content
 - Site navigation
-  - [ ] logo
-  - [ ] Create a site menu (top-level navigation) that provides links to each of the pages
-  - [ ] Apply CSS styling to visually indicate when menu items have focus (i.e., are hovered over) and which menu item is currently active (i.e., which page is displayed)
-  - [ ] consistently across all pages
+  - [x] logo
+  - [x] Create a site menu (top-level navigation) that provides links to each of the pages
+  - [x] Apply CSS styling to visually indicate when menu items have focus (i.e., are hovered over) and which menu item is currently active (i.e., which page is displayed)
+  - [x] consistently across all pages
+
 - [Homepage](index.html)
   - [ ] first page visitors see
   - [ ] display four blogplosts  in reverse chronological order (i.e., the most recent post first).
@@ -101,6 +102,31 @@ Consider ways to embellish or expand on aspects of your blog beyond the core req
 Some suggested embellishments include:
 
 Responsive design (e.g., with CSS Flexbox or Grid) so the site dynamically adapts to different browser sizes
+-- Sticky navigation so the menu remains pinned to the top or side of the page when scrolled
+-- Scroll-to-top buttons that appear when the page is scrolled past a certain point
+CSS animations for the reveal of post content on the archive page
+A choice between light and dark CSS themes that can be toggled by the user
+You may choose an embellishment not listed above provided it involves raw HTML/CSS/JavaScript and goes beyond the core requirements. The use of libraries is prohibited. If in doubt, consult with your tutor or the unit coordinator.
+
+
+**CSS and Design Sources and References:**
+Logo Generated from DALL-E 
+Colour palette created with Adobe Colour
+Scroll to top icon from https://icons8.com/icons/set/scroll-top--static--c-adc8d9
+
+
+Sticky header : https://developer.chrome.com/blog/stick-your-landings-position-sticky-lands-in-webkit
+Flexbox basics: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+Flex Direction: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Scroll to top: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+DOMContentLoaded: https://stackoverflow.com/questions/39993676/code-inside-domcontentloaded-event-not-working, 
+
+https://javascript.info/onload-ondomcontentloaded
+
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+
 Sticky navigation so the menu remains pinned to the top or side of the page when scrolled
 Scroll-to-top buttons that appear when the page is scrolled past a certain point
 CSS animations for the reveal of post content on the archive page
