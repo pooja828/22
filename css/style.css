@@ -1,14 +1,4 @@
 
-/* Darken header colour, lighten active page link*/
-
-
-
-
-
-
-
-
-
 
 body, header, nav, footer {
     display: flex;
@@ -22,15 +12,41 @@ body, header, nav, footer {
 main {
     display: flex;
     flex-direction: column;
-    height: 5600px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding:20px;
+    height: auto;
     overflow-y: auto;
     margin-top: 20px;
+}
+
+body {
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #025E73;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ADC8D9;
+    color: #0388A6;
+}
+
+tr:nth-child(even) {
     background-color: #DCEAF2;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
+.post {
+    height: auto;
+    width: 80%;
 }
 
 header {
@@ -41,24 +57,27 @@ header {
     height: 200px;
 }
 
-header.scrolled {
-    background-color: #DCEAF2; /* Primary background color */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100px; /* new height when scrolled */
-
-}
-
-#logo {
-    width: 175px; /* size when not scrolled */
-    height: auto; /* to maintain aspect ratio */
+header.scrolled, #logo.scrolled, nav.scrolled {
+    background-color: #639CBF;
     transition: 0.5s;
 }
 
-#logo.scrolled {
-    width: 75px;
-    height: auto;
+header.scrolled {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100px;
 }
 
+#logo {
+    width: 175px;
+    height: auto;
+    transition: 0.5s;
+    border: none;
+}
+
+#logo.scrolled {
+    width: 100px;
+    background-color: #0388A6;
+}
 
 button {
     cursor: pointer;
@@ -66,12 +85,32 @@ button {
     color: #025E73;
 }
 
-h1, h5 {
+.hideButton, .showButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #025E73;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hideButton:hover, .showButton:hover {
+    background-color: #0388A6;
+}
+
+.showButton {
+    display: none;
+    background-color: #639CBF;
+}
+
+
+h1, h5, th {
     color: #0388A6;
 }
 
 h2, h4 {
-    color: #ADC8D9;
+    color: #25586f;
     font-size: 200%;
 }
 
@@ -80,9 +119,14 @@ h3 {
     font-size: 100%;
 }
 
-p {
-    line-height: 25px;
+p, table, th, td {
     color: #025E73;
+}
+
+.tagStyle {
+    color: #025E73;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 article {
@@ -96,7 +140,7 @@ article {
 }
 
 nav a {
-    color: #025E73;
+    color: #ffffff;
     font-size: 150%;
     text-align: center;
     text-decoration: none;
@@ -104,15 +148,26 @@ nav a {
     padding: 10px 15px;
 }
 
+
 nav a:hover, nav a:focus {
-    background-color: #ADC8D9;
+    background-color: #025E73;
     color: #0388A6;
     font-weight: bold;
 }
 
-nav.scrolled {
-    background-color: #DCEAF2; /* Primary background color */
-    transition: 0.5s;
+nav a.active {
+    background-color: #025E73;
+    color: #ADC8D9;
+    text-decoration: underline;
+}
+
+nav, header {
+    background-color: #025E73;
+}
+
+
+nav.scrolled, header.scrolled {
+    background-color: #0388A6;
 }
 
 
@@ -130,4 +185,140 @@ nav input[type=text] {
     bottom: 2%;
     right: 2%;
     padding: 10px 20px;
+}
+
+.login-section {
+    background-color: #DCEAF2;
+    text-align: center;
+    border: 3px solid #ADC8D9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+    height: 10%;
+    margin: 5% auto 20%;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+.login-section input[type="text"], .login-section input[type="password"] {
+    width: 60%;
+    height: 20px;
+    padding: 5px;
+}
+
+#new, #login {
+    padding: 15px 30px;
+    width: auto;
+}
+
+.create-section {
+    background-color: #DCEAF2;
+    text-align: center;
+    border: 3px solid #ADC8D9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 10%;
+    margin: 5% auto 20%;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+.textarea {
+    text-align: center;
+    border: 1px solid #025E73;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1px 6px;
+    display: block;
+    width: 90%;
+    overflow: hidden;
+    resize: both;
+    min-height: 60px;
+    line-height: 20px;
+    margin: auto;
+}
+
+.textarea[contenteditable]:empty::before {
+    content: attr(placeholder);
+    color: gray;
+    text-align: center;
+}
+
+#reset, #create, #submit {
+    padding: 15px 30px;
+    width: auto;
+    cursor: pointer;
+    background-color: #639CBF;
+    color: #025E73;
+}
+
+
+.about-section {
+    background-color: #DCEAF2;
+    text-align: center;
+    border: 3px solid #ADC8D9;
+    border-radius: 10px;
+    padding: 25px;
+    width: 80%;
+    margin: 5% auto 20%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+.about-content {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contri {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contri li {
+    margin-bottom: 10px;
+}
+
+#ref {
+    margin-top: 20px;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+    #logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .login-section {
+        width: 90%;
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    .login-section input[type="text"], .login-section input[type="password"] {
+        width: 80%;
+        padding: 3px;
+    }
+
+    #new, #login {
+        padding: 10px 20px;
+    }
+
+    .textarea {
+        width: 80%;
+        padding: 3px;
+    }
+
+    #reset, #create, #submit {
+        padding: 10px 20px;
+    }
+
+    .about-section {
+        width: 90%;
+        padding: 15px;
+        font-size: 1em;
+    }
 }
