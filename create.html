@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> SUB </title>
+    <meta name="author" content="Harrison, Pooja & Sara - Group 3">
     <link rel="icon" href="img/penguin.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <title>SUB</title>
 </head>
 <body>
 <header>
-    <img id="logo" src="img/logo.png" alt="Logo">
+    <a href="index.html">
+        <img id="logo" src="img/logo.png" alt="Logo">
+    </a>
+
     <nav>
         <ul>
             <a href="index.html">Home</a>
@@ -20,5 +24,33 @@
         </ul>
     </nav>
 </header>
+<main>
+    <div class="create-section">
+        <h2> Add a new post - yay</h2>
+        <p> Build the post here:</p>
+        <form id="login">
+            <div class="row">
+                <h4>Title:</h4>
+                <span class="textarea" role="textbox" contenteditable id="title" placeholder="The funniest thing happend"></span>
+            </div>
+            <div class="row">
+                <h4>Tags:</h4>
+                <span class="textarea" role="textbox" contenteditable id="tags" placeholder="LOL, WOW"></span>
+            </div>
+            <div class="row">
+                <h4>Breadtext:</h4>
+                <span class="textarea" role="textbox" placeholder="Once upon a time..." contenteditable id="content"></span>
+            </div>
+        </form>
+        <div class="container2">
+            <a href="index.html">
+                <button id="reset" onclick="reset()">Reset</button>
+            </a>
+            <a href="index.html">
+                <button id="submit" onclick="val()">Submit</button>
+            </a>
+        </div>
+    </div>
+</main>
 </body>
 </html>

@@ -2,20 +2,53 @@
 <html lang="en">
 
 <head>
-    <title> SUB </title>
+    <title>SUB</title>
+    <meta name="author" content="Harrison, Pooja & Sara - Group 3">
     <link rel="icon" href="img/penguin.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 
-<!--
-    ask for password
--->
 <body>
-<h1>Enter password</h1>
-<input type="password" id="password">
-<button onclick="checkPassword()">Submit</button>
-</body>
+<header>
+    <a href="index.html">
+        <img id="logo" src="img/logo.png" alt="Logo">
+    </a>
 
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a class="active" href="login.html">Login</a>
+            <a href="create.html">Post</a>
+            <a href="archive.html">Archive</a>
+            <a href="about.html">About Us</a>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="login-section">
+        <p> Please fill in your credentials:</p>
+        <form id="login">
+            <div class="row">
+                <h4>User name:</h4>
+                <input type="text" id="uname" name="uname" required><br>
+            </div>
+            <div class="row">
+                <h4>Password:</h4>
+                <input type="password" id="psw" name="psw" pattern="(?=.*\w).{6,12}" required>
+            </div>
+        </form>
+
+        <div class="container2">
+            <a href="index.html">
+                <button id="new">Register</button>
+            </a>
+            <a href="index.html">
+                <button id="login">Login</button>
+            </a>
+        </div>
+    </div>
+</main>
+</body>
 
 </html>
