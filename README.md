@@ -7,6 +7,7 @@ Workload distribution:
 - HD: Commander of Consistency: CSS + Site Navigation
 - PJ: Home page, archived
 - SK: login, create, about
+- LJ: registration, js validation
 
 Timeline:
 
@@ -14,8 +15,10 @@ Timeline:
 - *21/3*
 - *4/4*
   - github mongle jungle
-- 11/4
-- 18/4
+- 11/4: login validation, fine tuning
+  - LJ: registration validation
+  - SK: create validation
+- 18/4: qc, handin
 - **19/4 IS HANDIN**
 
 ### Content
