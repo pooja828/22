@@ -22,7 +22,7 @@ Timeline:
 - Site navigation
   - [x] ~~logo~~
   - [x] ~~Create a site menu (top-level navigation) that provides links to each of the pages~~
-  - [x]~~ Apply CSS styling to visually indicate when menu items have focus (i.e., are hovered over) and which menu item is currently active (i.e., which page is displayed)~~
+  - [x] ~~ Apply CSS styling to visually indicate when menu items have focus (i.e., are hovered over) and which menu item is currently active (i.e., which page is displayed)~~
   - [x] ~~consistently across all pages~~
 
 - [Homepage](index.html)
@@ -30,18 +30,18 @@ Timeline:
   - [X] ~~display four blogplosts  in reverse chronological order (i.e., the most recent post first).~~
     All posts include:
     - [X] ~~post title~~
-    - [X]~~ post creation date with day, month, and year components~~
+    - [X] ~~ post creation date with day, month, and year components~~
     - [X] ~~post tags/keywords~~
-    - [X]~~ post content~~
+    - [X] ~~ post content~~
   - [X] ~~styled~~
   - [X] ~~at least 200 words per post, [no need to make sense](https://loremipsum.io)~~
 - [Archive page](archive.html)
-  - [X]~~ 5 archived posts different from the previous four~~
-  - [X]~~ Archived posts should also be listed in reverse chronological order~~
+  - [X] ~~ 5 archived posts different from the previous four~~
+  - [X] ~~ Archived posts should also be listed in reverse chronological order~~
   - [X] ~~All archived posts should include (min 200 words):~~
     - [X] ~~The content of each archived post should include at least the following:~~
     - [X] ~~post title~~
-    - [X]~~ post creation date with day, month, and year components~~
+    - [X] ~~ post creation date with day, month, and year components~~
     - [X] ~~post tags/keywords~~
     - [X] ~~a link, button or similar control allowing the user to read the full post~~
   - [X] ~~this button: Clicking this link/button should cause the post content to be displayed beneath, which you can achieve using CSS and JavaScript (and animation too if you choose). A link/button should also be provided to hide the content~~
