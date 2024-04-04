@@ -29,12 +29,12 @@ Timeline:
   - [X] first page visitors see
   - [X] display four blogplosts  in reverse chronological order (i.e., the most recent post first).
     All posts include:
-    - [ ] post title
-    - [ ] post creation date with day, month, and year components
-    - [ ] post tags/keywords
-    - [ ] post content
+    - [X] post title
+    - [X] post creation date with day, month, and year components
+    - [X] post tags/keywords
+    - [X] post content
   - [ ] styled
-  - [ ] at least 200 words per post, [no need to make sense](https://loremipsum.io)
+  - [X] at least 200 words per post, [no need to make sense](https://loremipsum.io)
 - [Archive page](archive.html)
   - [ ] 5 archived posts different from the previous four
   - [ ] Archived posts should also be listed in reverse chronological order
