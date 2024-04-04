@@ -11,8 +11,9 @@ Workload distribution:
 Timeline:
 
 - meeting @morris miller library see messenger at 12:30
-- 21/3
+- *21/3*
 - 4/4
+  - github mongle jungle
 - 11/4
 - 18/4
 - **19/4 IS HANDIN**
@@ -25,8 +26,8 @@ Timeline:
   - [x] consistently across all pages
 
 - [Homepage](index.html)
-  - [ ] first page visitors see
-  - [ ] display four blogplosts  in reverse chronological order (i.e., the most recent post first).
+  - [X] first page visitors see
+  - [X] display four blogplosts  in reverse chronological order (i.e., the most recent post first).
     All posts include:
     - [ ] post title
     - [ ] post creation date with day, month, and year components
@@ -50,18 +51,28 @@ Timeline:
   - [ ] A register link/button should be included for those that are not current members (see next)
   - [ ] Remember, submitting the form should take the user back to the homepage; implementing a functional login system will be part of Assignment 2
 - **registration page**
-  - [ ]  Decision point: Your group will need to decide between implementing user registration on the Login page by changing the displayed form (with JavaScript) or directing the user to a separate registration page (register.html)
-Whichever option you choose, the expected functionality of the registration form is as follows:
-The form should include input fields and associated labels for username, email address, password, and confirm password, together with a button to register, and a button to reset (clear) the form fields values
+  - [X]  ~~Decision point: Your group will need to decide between implementing user registration on the Login page by changing the displayed form (with JavaScript) or directing the user to a separate registration page (register.html)~~
+
+Whichever option you choose, the expected functionality of the registration form is as follows: The form should include input fields and associated labels for
+  - [X] ~~username,~~
+  - [X] ~~email address,~~
+  - [X] ~~password, and~~
+  - [X] ~~confirm password,~~
+  - [X] ~~together with a button to register,~~
+  - [X] ~~and a button to reset (clear) the form fields values~~
+
 Within your group, decide on a password policy (a set of rules governing password requirements)
 Your policy should incorporate a minimum length and a required combination of letters (uppercase and lowercase), digits (0–9), or symbols/special characters
+- [ ] policy (characters 2-22, one number)
 Include JavaScript field validation to prevent the registration form from being submitted if:
-any of the fields are empty
-the email address field does not contain a valid email address (i.e., is not well-formed; you do not need to check if exists)
-the password and confirm password fields do not match (i.e., do not contain the same value)
-the password does not conform to your password policy
-Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms
-Clicking the reset button should clear all form field values
+- [ ] any of the fields are empty
+- [ ] the email address field does not contain a valid email address (i.e., is not well-formed; you do not need to check if exists) (check if @ is present)
+- [ ] the password and confirm password fields do not match (i.e., do not contain the same value)
+- [ ] the password does not conform to your password policy
+- [ ] Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms (refering to login and registration)
+- [ ] Clicking the reset button should clear all form field values
+
+
 - [create post](create.html)
   - [X]  ~~The page should include a form element with input fields and labels for the post’s title, tags/keywords, and content with a button to create the post and a button to reset (clear) the form~~
   - [ ]  Include JavaScript field validation to prevent the form from being submitted if:
@@ -70,7 +81,7 @@ the title field exceeds 80 characters
   - [ ] As with the other forms, built-in HTML validation will need to be disabled Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms
   - [ ] Clicking the reset button should clear all form field values
 - [About page](about.html)
-  - [ ] Include the names and student IDs of each group member
+  - [X] Include the names and student IDs of each group member
   - [ ] Include a reference list for all assets used that have not been created by your group (e.g., images, fonts, icons, etc.)
   - [ ] References to web resources should include the link to the specific page used and not just the top-level site
  
