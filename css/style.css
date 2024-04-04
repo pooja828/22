@@ -206,6 +206,25 @@ nav input[type=text] {
     padding: 5px;
 }
 
+.registration-section {
+    background-color: #DCEAF2;
+    text-align: center;
+    border: 3px solid #ADC8D9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+    height: 10%;
+    margin: 5% auto 20%;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+.registration-input[type="text"], .registration-input[type="password"] {
+    width: 60%;
+    height: 20px;
+    padding: 5px;
+}
+
 #new, #login {
     padding: 15px 30px;
     width: auto;
