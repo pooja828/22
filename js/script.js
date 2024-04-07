@@ -55,3 +55,18 @@ function checkPassword() {
     }
     document.location.href='./index.html';
 }
+
+//TODO: check email valid (check email contains "@" and ".com")
+
+
+//TODO: prevents forms being submitted if fields are empty
+function validateForms() {
+    
+}
+
+//TODO: reset function, clears all fields
+//function reset() {}
+
+
+//TODO: submit button links back to homepage
+
