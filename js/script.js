@@ -118,7 +118,7 @@ function validateForm() {
     });
 
     if (validCount === elements.length) {
-        alert("Success! Your post has been made");
+        confirm("Success!");
         window.location.href ="index.html";
     }
 }
