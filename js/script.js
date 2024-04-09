@@ -56,11 +56,31 @@ function checkPassword() {
     document.location.href='./index.html';
 }
 
-//TODO: check email valid (check email contains "@" and ".com")
+//TODO: check email valid (check email contains "@" and ".") #edit not everyone uses .com
 
 
 //TODO: prevents forms being submitted if fields are empty
 function validateForms() {
+    let span1 = document.getElementById("span_title");
+    let span2 = document.getElementById("span_tags");
+    let span3 = document.getElementById("span_content");
+
+    var elements = [
+        {span1},{span2},{span3}
+    ]
+
+    elements.forEach(function(element){
+        var inputElement = document.getElementById(element.inputId);
+        if (inputElement.textContent === ""){
+            isValid=false;
+        }
+    })
+    span1.textContent = "";
+    span2.textContent = "";
+    span3.textContent = "";
+
+    if (span1.textContent == ""){}
+
     
 }
 

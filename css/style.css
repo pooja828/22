@@ -270,8 +270,22 @@ nav input[type=text] {
     cursor: pointer;
     background-color: #639CBF;
     color: #025E73;
+    font-family: inherit;
+    border-color: #025E73;
+    border-radius: 10px;
 }
 
+
+#reset:hover, #create:hover, #submit:hover {
+    padding: 15px 30px;
+    width: auto;
+    cursor: pointer;
+    background-color: #025E73;
+    color: #639CBF;
+    font-family: inherit;
+    border-color: #639CBF;
+    border-radius: 10px;
+}
 
 .about-section {
     background-color: #DCEAF2;

@@ -72,13 +72,12 @@ Timeline:
   - [ ] the password does not conform to your password policy
   - [ ] Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms (refering to login and registration)  
   - [ ] Clicking the reset button should clear all form field values
-
 - [create post](create.html)
   - [X]  ~~The page should include a form element with input fields and labels for the post’s title, tags/keywords, and content with a button to create the post and a button to reset (clear) the form~~
   - [ ]  Include JavaScript field validation to prevent the form from being submitted if:
-any of the fields are empty (yes, the author must always supply at least one tag/keyword)
-the title field exceeds 80 characters
-  - [ ] As with the other forms, built-in HTML validation will need to be disabled Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms
+    - [ ] any of the fields are empty (yes, the author must always supply at least one tag/keyword)
+    the title field exceeds 80 characters
+    - [ ] As with the other forms, built-in HTML validation will need to be disabled Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms
   - [X] ~~Clicking the reset button should clear all form field values~~
 - [About page](about.html)
   - [X] ~~Include the names and student IDs of each group member~~
