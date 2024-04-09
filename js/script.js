@@ -63,56 +63,40 @@ function checkPassword() {
 // only works for the two first items
 function validateForm() {
     var elements = [
-        {inputId: "span_title",
-        placeholder:"The funniest thing happend",
-        state: "inValid",
-        error:"title_error"},
+        {inputId: "span_title", error: "title_error", maxLength: 80, errorMessage: "This title is too long, try using less than 80 characters" },
+        {inputId: "span_tags", error: "tags_error", maxLength: Infinity, errorMessage: "" },
+        {inputId: "span_content", error: "content_error", maxLength: Infinity, errorMessage: "" }
+    ];
 
-        {inputId: "span_tags",
-        placeholder:"LOL, WOW",
-        state: "inValid",
-        error:"tags_error"},
+    var validCount = 0;
 
-        {inputid:"span_content",
-        placeholder:"Once upon a time...",
-        state: "inValid",
-        error:"content_error"}
-
-    ]
-
-    elements.forEach(function(element){ 
+    elements.forEach(function(element) {
         var spanElement = document.getElementById(element.inputId);
-        if (element.inputId === "span_title"){ //check the title
-            var textLength = spanElement.textContent.trim().length; //'s length
-            console.log(textLength," titles length")
-            if (textLength > 80){ // if it is longer than 80 characters
-                spanElement.style.borderColor = 'orange'; //make the border orange
-                var errorText = document.getElementById(element.error); //fetch the error text
-                errorText.style.color = 'orange'; //make it orange too
-                errorText.textContent = 'This title is too long, try using less than 80 characters' //tell the user how to fix it
-            }
-            if (textLength < 80){ // if it is shorter than 80 characters
-                spanElement.style.borderColor = 'black'; //make the border orange
-                var errorText = document.getElementById(element.error); //fetch the error text
-                errorText.style.color = "none"; //make it orange too
-                errorText.textContent = ''
-            }
+        var errorText = document.getElementById(element.error);
+        var textLength = spanElement.textContent.trim().length;
 
-        }
-
-        if (spanElement.textContent.trim() === '') { //check if the elements are empty
+        if (textLength === 0) {
             spanElement.style.borderColor = 'orange';
-            spanElement.setAttribute('placeholder','Please write here'); //tell them to write
+            errorText.style.color = 'orange';
+            errorText.textContent = 'Missing text';
+            spanElement.setAttribute('placeholder', 'Please write here');
+        } else if (textLength > element.maxLength) {
+            spanElement.style.borderColor = 'orange';
+            errorText.style.color = 'orange';
+            errorText.textContent = element.errorMessage;
+        } else {
+            spanElement.style.borderColor = '#025E73';
+            errorText.textContent = '';
+            validCount++;
         }
-        
-        else {
-            spanElement.style.borderColor = 'black'; 
-            console.log(element, " is checked");
-            element.state = "Valid";
-        }
-    })
-    
+    });
+
+    if (validCount === elements.length) {
+        alert("Success! Your post has been made");
+        window.location.href ="index.html";
+    }
 }
+
 
 //TODO: reset function, clears all fields
 function resetForm() {
