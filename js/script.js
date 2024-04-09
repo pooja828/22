@@ -60,19 +60,56 @@ function checkPassword() {
 
 
 //TODO: prevents forms being submitted if fields are empty
+// only works for the two first items
 function validateForm() {
     var elements = [
-        {inputId: "span_title"},{inputId: "span_tags"},{inputid:"span_content"}
+        {inputId: "span_title",
+        placeholder:"The funniest thing happend",
+        state: "inValid",
+        error:"title_error"},
+
+        {inputId: "span_tags",
+        placeholder:"LOL, WOW",
+        state: "inValid",
+        error:"tags_error"},
+
+        {inputid:"span_content",
+        placeholder:"Once upon a time...",
+        state: "inValid",
+        error:"content_error"}
+
     ]
 
-    elements.forEach(function(element){
+    elements.forEach(function(element){ 
         var spanElement = document.getElementById(element.inputId);
-        if (spanElement.textContent.trim() === '') {
-            isValid=false;
-            spanElement.setAttribute('placeholder','Please write here');
-            spanElement.style.borderColor = 'orange';
+        if (element.inputId === "span_title"){ //check the title
+            var textLength = spanElement.textContent.trim().length; //'s length
+            console.log(textLength," titles length")
+            if (textLength > 80){ // if it is longer than 80 characters
+                spanElement.style.borderColor = 'orange'; //make the border orange
+                var errorText = document.getElementById(element.error); //fetch the error text
+                errorText.style.color = 'orange'; //make it orange too
+                errorText.textContent = 'This title is too long, try using less than 80 characters' //tell the user how to fix it
+            }
+            if (textLength < 80){ // if it is shorter than 80 characters
+                spanElement.style.borderColor = 'black'; //make the border orange
+                var errorText = document.getElementById(element.error); //fetch the error text
+                errorText.style.color = "none"; //make it orange too
+                errorText.textContent = ''
+            }
+
         }
-        console.log(element, " is checked")
+
+        if (spanElement.textContent.trim() === '') { //check if the elements are empty
+            spanElement.style.borderColor = 'orange';
+            spanElement.setAttribute('placeholder','Please write here'); //tell them to write
+        }
+        
+        else {
+            spanElement.style.borderColor = 'black'; 
+            console.log(element, " is checked");
+            element.state = "Valid";
+        }
     })
     
 }
