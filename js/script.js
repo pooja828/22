@@ -135,6 +135,23 @@ function resetForm() {
     span3.textContent = "";
  }  
 
+//TODO: check email valid (check email contains "@" and ".com")
+
+
+//TODO: prevents forms being submitted if fields are empty
+function validateRegoForm() {
+    if(document.forms["registration-form"]["username"].value == "") {
+        alert("Username is required");
+    }
+    
+}
+//reference: W3 Schools js_validation
+
+//This function is not strictly necessary as just adding 'onclick="reset()" ' to the reset button achieves the same outcome. Check with Sara on approach
+function resetRegoForm() {
+    document.getElementById("registration-form").reset();
+}
+//reference: W3 Schools Form Reset Method (https://www.w3schools.com/jsref/met_form_reset.asp)
 
 //TODO: submit button links back to homepage
 
