@@ -33,10 +33,12 @@
         <form id="login">
             <div class="row">
                 <h4>User name:</h4>
+                <p id="user_error"></p>
                 <input type="text" id="uname" name="uname" required><br>
             </div>
             <div class="row">
                 <h4>Password:</h4>
+                <p id="psw_error"></p>
                 <input type="password" id="psw" name="psw" pattern="(?=.*\w).{6,12}" required>
             </div>
         </form>
@@ -45,7 +47,7 @@
             <a href="registration.html">
                 <button class="actionButton" id="new">Register</button>
             </a>
-                <button class="actionButton" id="login">Login</button>
+            <button class="actionButton" type="button" id="login" onclick="checkForm()">Login</button>
         </div>
     </div>
 </main>
