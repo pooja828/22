@@ -30,27 +30,23 @@
     <div class="create-section">
         <h2> Add a new post - yay</h2>
         <p> Build the post here:</p>
-        <form id="login">
+        <form id="loginForm">
             <div class="row">
                 <h4>Title:</h4>
-                <span class="textarea" role="textbox" contenteditable id="title" placeholder="The funniest thing happend"></span>
+                <span class="textarea" role="textbox" contenteditable id="span_title" placeholder="The funniest thing happend"></span>
             </div>
             <div class="row">
                 <h4>Tags:</h4>
-                <span class="textarea" role="textbox" contenteditable id="tags" placeholder="LOL, WOW"></span>
+                <span class="textarea" role="textbox" contenteditable id="span_tags" placeholder="LOL, WOW"></span>
             </div>
             <div class="row">
                 <h4>Breadtext:</h4>
-                <span class="textarea" role="textbox" placeholder="Once upon a time..." contenteditable id="content"></span>
+                <span class="textarea" role="textbox" placeholder="Once upon a time..." contenteditable id="span_content"></span>
             </div>
         </form>
         <div class="container2">
-            <a href="index.html">
-                <button id="reset" onclick="reset()">Reset</button>
-            </a>
-            <a href="index.html">
+                <button type="button" id="reset" onclick="resetForm()">Reset</button>
                 <button id="submit" onclick="val()">Submit</button>
-            </a>
         </div>
     </div>
 </main>

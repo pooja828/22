@@ -65,7 +65,15 @@ function validateForms() {
 }
 
 //TODO: reset function, clears all fields
-//function reset() {}
+function resetForm() {
+    let span1 = document.getElementById("span_title");
+    let span2 = document.getElementById("span_tags");
+    let span3 = document.getElementById("span_content");
+ 
+    span1.textContent = "";
+    span2.textContent = "";
+    span3.textContent = "";
+ }  
 
 
 //TODO: submit button links back to homepage
