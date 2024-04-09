@@ -60,27 +60,20 @@ function checkPassword() {
 
 
 //TODO: prevents forms being submitted if fields are empty
-function validateForms() {
-    let span1 = document.getElementById("span_title");
-    let span2 = document.getElementById("span_tags");
-    let span3 = document.getElementById("span_content");
-
+function validateForm() {
     var elements = [
-        {span1},{span2},{span3}
+        {inputId: "span_title"},{inputId: "span_tags"},{inputid:"span_content"}
     ]
 
     elements.forEach(function(element){
-        var inputElement = document.getElementById(element.inputId);
-        if (inputElement.textContent === ""){
+        var spanElement = document.getElementById(element.inputId);
+        if (spanElement.textContent.trim() === '') {
             isValid=false;
+            spanElement.setAttribute('placeholder','Please write here');
+            spanElement.style.borderColor = 'orange';
         }
+        console.log(element, " is checked")
     })
-    span1.textContent = "";
-    span2.textContent = "";
-    span3.textContent = "";
-
-    if (span1.textContent == ""){}
-
     
 }
 
