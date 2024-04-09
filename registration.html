@@ -29,7 +29,7 @@
         <div class="registration-section">
             <h2>Registration</h2>
        
-            <form id="registration-form" action="" novalidate>
+            <form id="registration-form" action="" novalidate onsubmit="return validateRegoForm()">
                 <label for="username">Username:</label>
                 <input class="registration-input" type="text" id="username" name="username" required>
                 <label for="email">Email address:</label>
@@ -41,8 +41,8 @@
                 <label for="cpassword">Confirm password:</label>
                 <input class="registration-input" type="password" id="cpassword" name="cpassword" required minlength="6" maxlength="12">
                 <div id="form-actions"><p>
-                    <button type="button" class="actionButton" id="register">Register</button>
-                    <button type="button" class="actionButton" id="clear"><a href=index.html>Cancel</a></button></p>
+                    <button type="button" class="actionButton" id="rego_submit" onclick="submit()">Submit</button>
+                    <button type="button" class="actionButton" id="rego_reset" onclick="resetRegoForm()">Reset</button></p>
                 </div>
             </form>
         </div>
