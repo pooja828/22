@@ -60,6 +60,44 @@ function checkPassword() {
 
 
 //TODO: prevents forms being submitted if fields are empty
+function checkForm() {
+    function validateForm() {
+        var elements = [
+            {inputId: "span_title", error: "title_error", maxLength: 80, errorMessage: "This title is too long, try using less than 80 characters" },
+            {inputId: "span_tags", error: "tags_error", maxLength: Infinity, errorMessage: "" },
+            {inputId: "span_content", error: "content_error", maxLength: Infinity, errorMessage: "" }
+        ];
+    
+        var validCount = 0;
+    
+        elements.forEach(function(element) {
+            var spanElement = document.getElementById(element.inputId);
+            var errorText = document.getElementById(element.error);
+            var textLength = spanElement.textContent.trim().length;
+    
+            if (textLength === 0) {
+                spanElement.style.borderColor = 'orange';
+                errorText.style.color = 'orange';
+                errorText.textContent = 'Missing text';
+                spanElement.setAttribute('placeholder', 'Please write here');
+            } else if (textLength > element.maxLength) {
+                spanElement.style.borderColor = 'orange';
+                errorText.style.color = 'orange';
+                errorText.textContent = element.errorMessage;
+            } else {
+                spanElement.style.borderColor = '#025E73';
+                errorText.textContent = '';
+                validCount++;
+            }
+        });
+    
+        if (validCount === elements.length) {
+            alert("Success! Your post has been made");
+            window.location.href ="index.html";
+        }
+    }
+}
+
 // only works for the two first items
 function validateForm() {
     var elements = [

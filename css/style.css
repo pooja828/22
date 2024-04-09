@@ -85,6 +85,33 @@ button {
     color: #025E73;
 }
 
+.actionButton{
+    padding: 15px 30px;
+    width: auto;
+    cursor: pointer;
+    background-color: #639CBF;
+    color:#ffffff;
+    font-family: inherit;
+    border-color: #639CBF;
+    border-radius: 10px;
+}
+
+.actionButton:hover {
+    padding: 15px 30px;
+    width: auto;
+    cursor: pointer;
+    background-color: #025E73;
+    color: #ffffff;
+    font-family: inherit;
+    border-color: #025E73;
+    border-radius: 10px;
+}
+
+.actionButton a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .hideButton, .showButton {
     padding: 10px 20px;
     font-size: 1em;
@@ -225,11 +252,6 @@ nav input[type=text] {
     padding: 5px;
 }
 
-#new, #login {
-    padding: 15px 30px;
-    width: auto;
-}
-
 .create-section {
     background-color: #DCEAF2;
     text-align: center;
@@ -262,30 +284,6 @@ nav input[type=text] {
     content: attr(placeholder);
     color: gray;
     text-align: center;
-}
-
-
-#reset, #create, #submit {
-    padding: 15px 30px;
-    width: auto;
-    cursor: pointer;
-    background-color: #639CBF;
-    color: #025E73;
-    font-family: inherit;
-    border-color: #025E73;
-    border-radius: 10px;
-}
-
-
-#reset:hover, #create:hover, #submit:hover {
-    padding: 15px 30px;
-    width: auto;
-    cursor: pointer;
-    background-color: #025E73;
-    color: #639CBF;
-    font-family: inherit;
-    border-color: #639CBF;
-    border-radius: 10px;
 }
 
 .about-section {
