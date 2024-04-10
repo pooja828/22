@@ -51,7 +51,7 @@ Timeline:
  - [login page](login.html)
     - [X] ~~The page should include a form element with input fields and labels for a username, a password, and a login button~~
     - [X] ~~Include JavaScript field validation to prevent the form from being submitted if any of the fields are empty (see the common requirements for form handling above)~~
-    - [X] ~~A register link/button should be included for those that are not current members (see next)~~
+    - [X] A register link/button should be included for those that are not current members (see next)
     - [X] ~~Remember, submitting the form should take the user back to the homepage; implementing a functional login system will be part of Assignment 2~~
 - [registration page](registration.html)
   - [X]  ~~Decision point: Your group will need to decide between implementing user registration on the Login page by changing the displayed form (with JavaScript) or directing the user to a separate registration page (register.html)~~
