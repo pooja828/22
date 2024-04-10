@@ -60,25 +60,34 @@ function checkPassword() {
 
 
 //TODO: prevents forms being submitted if fields are empty
+
 function checkForm() {
-        var elements = [{id: "uname", error:"user_error"},{id: "psw",error:"psw_error"}];
-console.log(elements);
+        var elements = [{id: "login-username", error:"user_error"},{id: "login-password",error:"psw_error"}];
+        console.log(elements);
         let validCount =0
+
         elements.forEach(function(element){
             let x = document.forms["login"][element.id].value;
             var errorText = document.getElementById(element.error);
             var textLength = x.length;
             console.log(element, " has textlength of ", textLength)
 
-            if (textLength ==0){
-                input.style.borderColor = 'orange';
+            if (textLength === 0){
+                document.getElementById(element.id).style.borderColor = "orange";
                 errorText.style.color = 'orange';    
                 errorText.textContent = 'Missing text';
-
+                
             }
-            validCount++
-            console.log("current valid count is", validCount)
+            if (textLength > 0){
+                // undo changes
+                document.getElementById(element.id).style.borderColor = "#025E73";
+                errorText.textContent = '';
+
+                validCount++
+                console.log("current valid count is", validCount)
+            }
         })
+
         if (validCount === 2){
             alert("Success! You have logged in");
             window.location.href ="index.html";

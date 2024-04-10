@@ -25,24 +25,26 @@
             </ul>
         </nav>
     </header>
+
+    
     <main>
         <div class="registration-section">
             <h2>Registration</h2>
        
             <form class="registration-form" id="registration-form" action="" novalidate onsubmit="return validateRegoForm()">
                 <label for="username">Username:</label>
-                <input class="registration-input" type="text" id="username" name="username" required>
+                <input class="input" type="text" id="username" name="username" required>
                 
                 <label for="email">Email address:</label>
-                <input class="registration-input" type="email" id="email" name="email" required>
+                <input class="input" type="email" id="email" name="email" required>
                 
                 <label for="password">Password:</label>
-                <input class="registration-input" type="password" id="password" name="password" required minlength="6" maxlength="12">
+                <input class="input" type="password" id="password" name="password" required minlength="6" maxlength="12">
                 
                 <label for="cpassword">Confirm password:</label>
-                <input class="registration-input" type="password" id="cpassword" name="cpassword" required minlength="6" maxlength="12">
+                <input class="input" type="password" id="cpassword" name="cpassword" required minlength="6" maxlength="12">
                 
-                <div id="form-actions"><p>
+                <div id="form-actions">
                     <button type="button" class="actionButton" id="rego_submit" onclick="submit()">Submit</button>
                     <button type="button" class="actionButton" id="rego_reset" onclick="resetRegoForm()">Reset</button></p>
                 </div>

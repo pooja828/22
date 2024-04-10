@@ -233,6 +233,10 @@ nav input[type=text] {
     padding: 5px;
 }
 
+.login-actions a{
+    text-decoration: none;
+}
+
 .registration-section {
     background-color: #DCEAF2;
     text-align: center;
@@ -255,8 +259,7 @@ nav input[type=text] {
     
 }
     
-
-.registration-input[type="text"], .registration-input[type="password"], .registration-input[type="email"] {
+.input[type="text"], .input[type="password"], .input[type="email"] {
     height: 20px;
     padding: 5px;
     font-family: inherit;
@@ -340,6 +343,7 @@ nav input[type=text] {
         width: 90%;
         padding: 5px;
         font-size: 1em;
+        line-height: 50px;
     }
 
     .login-section input[type="text"], .login-section input[type="password"] {
