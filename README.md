@@ -66,12 +66,12 @@ Timeline:
   Your policy should incorporate a minimum length and a required combination of letters (uppercase and lowercase), digits (0–9), or symbols/special characters
   - [ ] policy (characters 2-22, one number)
   Include JavaScript field validation to prevent the registration form from being submitted if:
-  - [ ] any of the fields are empty
+  - [X] ~~any of the fields are empty~~
   - [ ] the email address field does not contain a valid email address (i.e., is not well-formed; you do not need to check if exists) (check if @ is present)
-  - [ ] the password and confirm password fields do not match (i.e., do not contain the same value)
+  - [X] ~~the password and confirm password fields do not match (i.e., do not contain the same value)~~
   - [ ] the password does not conform to your password policy
   - [ ] Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms (refering to login and registration)  
-  - [ ] Clicking the reset button should clear all form field values
+  - [X] ~~Clicking the reset button should clear all form field values~~
 - [create post](create.html)
   - [X]  ~~The page should include a form element with input fields and labels for the post’s title, tags/keywords, and content with a button to create the post and a button to reset (clear) the form~~
   - [X]  ~~Include JavaScript field validation to prevent the form from being submitted if:~~
