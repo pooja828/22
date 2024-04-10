@@ -250,7 +250,7 @@ nav input[type=text] {
     font-size: 1.5em;
 }
 
-.registration-form{
+.registrationForm{
     display:grid;
     grid-template-columns: auto 200px;
     gap: 10px;
