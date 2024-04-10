@@ -146,21 +146,52 @@ function resetForm() {
 
 //TODO: check email valid (check email contains "@" and ".com")
 
+//Form validation - code recycled from KIT202 Lab/Tutorial 5
+const form = document.forms["registrationForm"];
+if (form) {
+    form.addEventListener("submit", validateRegoForm);
+} else {
+    console.error("Unable to find the registration form; no validation will be performed");
+}
 
-//TODO: prevents forms being submitted if fields are empty
-function validateRegoForm() {
-    if(document.forms["registration-form"]["username"].value == "") {
-        alert("Username is required");
+//Prevents registration form being submitted if any fields are empty or if password and confirm password do not match
+function validateRegoForm(event) {
+    event.preventDefault();
+    if(document.forms["registrationForm"].elements.username.value == "") {
+        document.getElementById("usernameError").innerHTML = "Enter a valid username";
+        document.getElementById("username").setAttribute("style", "border-color: red");  
     }
-    
+    if(document.forms["registrationForm"].elements.email.value == "") {
+        document.getElementById("emailError").innerHTML = "Enter a valid email";
+        document.getElementById("email").setAttribute("style", "border-color: red");  
+    }
+    if(document.forms["registrationForm"].elements.password.value == "") {
+        document.getElementById("passwordError").innerHTML = "Enter a password";
+        document.getElementById("password").setAttribute("style", "border-color: red");
+    }  
+    if(document.forms["registrationForm"].elements.cpassword.value == "") {
+        document.getElementById("cpasswordError").innerHTML = "Confirm password";
+        document.getElementById("cpassword").setAttribute("style", "border-color: red");  
+    }
+    if(document.forms["registrationForm"].elements.password.value !== document.forms["registrationForm"].elements.cpassword.value) {
+        document.getElementById("cpasswordError").innerHTML = "Passwords do not match";
+        document.getElementById("cpassword").setAttribute("style", "border-color: red");
+        document.getElementById("password").setAttribute("style", "border-color: red");
+    }
 }
-//reference: W3 Schools js_validation
+//reference: KIT202 tutorial 5
 
-//This function is not strictly necessary as just adding 'onclick="reset()" ' to the reset button achieves the same outcome. Check with Sara on approach
+//code recycled from Sara's resetForm function, clears fields on Registration page
 function resetRegoForm() {
-    document.getElementById("registration-form").reset();
+    let field1 = document.getElementById("username");
+    let field2 = document.getElementById("email");
+    let field3 = document.getElementById("password");
+    let field4 = document.getElementById("cpassword");
+ 
+    field1.textContent = "";
+    field2.textContent = "";
+    field3.textContent = "";
+    field4.textContent = "";
 }
-//reference: W3 Schools Form Reset Method (https://www.w3schools.com/jsref/met_form_reset.asp)
-
 //TODO: submit button links back to homepage
 
