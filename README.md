@@ -49,10 +49,10 @@ Timeline:
     - [X] ~~a link, button or similar control allowing the user to read the full post~~
   - [X] ~~this button: Clicking this link/button should cause the post content to be displayed beneath, which you can achieve using CSS and JavaScript (and animation too if you choose). A link/button should also be provided to hide the content~~
  - [login page](login.html)
-  - [X] ~~The page should include a form element with input fields and labels for a username, a password, and a login button~~
-  - [ ] Include JavaScript field validation to prevent the form from being submitted if any of the fields are empty (see the common requirements for form handling above)
-  - [X] ~~A register link/button should be included for those that are not current members (see next)~~
-  - [X] ~~Remember, submitting the form should take the user back to the homepage; implementing a functional login system will be part of Assignment 2~~
+    - [X] ~~The page should include a form element with input fields and labels for a username, a password, and a login button~~
+    - [X] ~~Include JavaScript field validation to prevent the form from being submitted if any of the fields are empty (see the common requirements for form handling above)~~
+    - [X] ~~A register link/button should be included for those that are not current members (see next)~~
+    - [X] ~~Remember, submitting the form should take the user back to the homepage; implementing a functional login system will be part of Assignment 2~~
 - [registration page](registration.html)
   - [X]  ~~Decision point: Your group will need to decide between implementing user registration on the Login page by changing the displayed form (with JavaScript) or directing the user to a separate registration page (register.html)~~
   Whichever option you choose, the expected functionality of the registration form is as follows: The form should include input fields and associated labels for
