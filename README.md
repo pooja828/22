@@ -67,7 +67,7 @@ Timeline:
   - [ ] policy (characters 2-22, one number)
   Include JavaScript field validation to prevent the registration form from being submitted if:
   - [X] ~~any of the fields are empty~~
-  - [ ] the email address field does not contain a valid email address (i.e., is not well-formed; you do not need to check if exists) (check if @ is present)
+  - [X] ~~the email address field does not contain a valid email address (i.e., is not well-formed; you do not need to check if exists) (check if @ is present)~~
   - [X] ~~the password and confirm password fields do not match (i.e., do not contain the same value)~~
   - [ ] the password does not conform to your password policy
   - [ ] Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms (refering to login and registration)  
