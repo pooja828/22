@@ -145,34 +145,60 @@ function resetForm() {
  }  
 
 //TODO: check email valid (check email contains "@" and ".com")
+function validateEmail(address) {
+    //Standard expression for validating an email address - referenced multiple webpages but I got ChatGPT to talk me through it
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-//Form validation - code recycled from KIT202 Lab/Tutorial 5
+    //Checks if input to email field matches the pattern of the regex
+    if(regex.test(address)) {
+        return true //Email is in a valid form, it's possible it exists
+    }
+    else {
+        return false; //Email not valid
+    }
+}
+
 const form = document.forms["registrationForm"];
 if (form) {
     form.addEventListener("submit", validateRegoForm);
 } else {
     console.error("Unable to find the registration form; no validation will be performed");
 }
+//Reference: KIT202 Tutorial 5, shoutouts for the code piece
 
-//Prevents registration form being submitted if any fields are empty or if password and confirm password do not match
+//TODO: prevents registration form being submitted if any fields are empty or if password and confirm password do not match
 function validateRegoForm(event) {
+    //stops page from refreshing
     event.preventDefault();
+
+    //checks if there is content in the username field, returns an error if not
     if(document.forms["registrationForm"].elements.username.value == "") {
         document.getElementById("usernameError").innerHTML = "Enter a valid username";
         document.getElementById("username").setAttribute("style", "border-color: red");  
     }
+    //checks if there is content in the email field, returns an error if not
     if(document.forms["registrationForm"].elements.email.value == "") {
-        document.getElementById("emailError").innerHTML = "Enter a valid email";
-        document.getElementById("email").setAttribute("style", "border-color: red");  
+        document.getElementById("emailError").innerHTML = "Enter an email";
+        document.getElementById("email").setAttribute("style", "border-color: red");
     }
+    else {
+        //checks the format of the email field, returns an error if invalid
+        if(validateEmail(document.forms["registrationForm"].elements.email.value) == false) {
+            document.getElementById("emailError").innerHTML = "Email not valid form";
+            document.getElementById("email").setAttribute("style", "border-color: red");
+        }
+    }
+    //checks if there is content in the password field, returns an error if not
     if(document.forms["registrationForm"].elements.password.value == "") {
         document.getElementById("passwordError").innerHTML = "Enter a password";
         document.getElementById("password").setAttribute("style", "border-color: red");
-    }  
+    }
+    //checks if there is content in the confirm password field, returns an error if not  
     if(document.forms["registrationForm"].elements.cpassword.value == "") {
         document.getElementById("cpasswordError").innerHTML = "Confirm password";
         document.getElementById("cpassword").setAttribute("style", "border-color: red");  
     }
+    //checks if the password and confirm password fields match, returns an error if not
     if(document.forms["registrationForm"].elements.password.value !== document.forms["registrationForm"].elements.cpassword.value) {
         document.getElementById("cpasswordError").innerHTML = "Passwords do not match";
         document.getElementById("cpassword").setAttribute("style", "border-color: red");
